@@ -68,10 +68,15 @@ export function parseGithubRepo(repository, xpath) {
         repo,
         branch ? 'blob/' + branch : '',
         !prefixPath ? '' : prefixPath,
-        path + '.md',
+        path
       )
     )
   }
+
+  if (typeof xpath === 'string') {
+    xpath = xpath + '.md'
+  }
+
   if (typeof repository === 'string') {
     let branch = typeof xpath === 'string' ? 'master' : null
     return parse(url.parse(repository).pathname, branch, '', xpath)
