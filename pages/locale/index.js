@@ -12,9 +12,11 @@ let lang = 'en'
 export function switchLang(l) {
   lang = l
 }
-
 export function getLang() {
   return lang
+}
+export function exists(key) {
+  return key in set[lang]
 }
 
 global.__ = function (key) {

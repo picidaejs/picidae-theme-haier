@@ -11,6 +11,7 @@ import * as u from './utils'
 import { Link } from './utils'
 import c from 'classname'
 import nps from 'path'
+import Title from 'react-document-title'
 
 function warnNoInformation(inforPath) {
   console.error(`Warning: the information markdown not found: ${inforPath}.`)
@@ -165,13 +166,15 @@ export default class MarkdownToc extends React.PureComponent {
     const { render, pageData, location, themeConfig } = this.props
     const githubHref = u.parseGithubRepo(themeConfig.repository, location.pathname)
     return (
+
       <div className='docMainWrapper wrapper'>
+        <Title title={`${d.page.curr.title} - ${themeConfig.logo.name}`} />
         {this.renderSideBar(d)}
         <div className='container mainContainer'>
           <div className='wrapper'>
             <div className='post'>
               <header className='postHeader'>
-                <a href={githubHref} className='edit-page-link button' target="_blank">Edit</a>
+                <a href={githubHref} className='edit-page-link button' target="_blank">{__('button.edit')}</a>
                 <h1>{pageData.meta.title}</h1>
               </header>
               {render()}

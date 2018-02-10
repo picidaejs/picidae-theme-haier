@@ -68,7 +68,7 @@ export function parseGithubRepo(repository, xpath) {
         repo,
         branch ? 'blob/' + branch : '',
         !prefixPath ? '' : prefixPath,
-        path
+        path + '.md',
       )
     )
   }

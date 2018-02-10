@@ -1,7 +1,7 @@
 {
   "name": "picidae-theme-haier",
   "version": "1.0.0",
-  "description": "[![build status](https://img.shields.io/travis/imcuttle/picidae-theme-haier/master.svg?style=flat-square)](https://travis-ci.org/imcuttle/picidae-theme-haier) [![Test coverage](https://img.shields.io/codecov/c/github/imcuttle/picidae-theme-haier.svg?style=flat-square)](https://codecov.io/github/imcuttle/picidae-theme-haier?branch=master) [![NPM version](https://img.shields.io/npm/v/picidae-theme-haier.svg?style=flat-square)](https://www.npmjs.com/package/picidae-theme-haier) [![NPM Downloads](https://img.shields.io/npm/dm/picidae-theme-haier.svg?style=flat-square&maxAge=43200)](https://www.npmjs.com/package/picidae-theme-haier)",
+  "description": "🍔 The universal picidae theme for project / library / framework etc.",
   "main": "index.js",
   "scripts": {
     "start": "picidae start",
@@ -14,7 +14,11 @@
   ],
   "keywords": [
     "imcuttle",
-    "picidae-theme-haier"
+    "picidae",
+    "theme",
+    "picidae-theme-haier",
+    "api",
+    "project document"
   ],
   "author": "",
   "license": "MIT",
@@ -22,7 +26,8 @@
     "classname": "0.0.0",
     "docsearch.js": "^2.5.2",
     "picidae-tools": "^0.0.3",
-    "polished": "^1.9.2"
+    "polished": "^1.9.2",
+    "react-document-title": "^2.0.3"
   },
   "devDependencies": {
     "picidae": "^2.1.6"

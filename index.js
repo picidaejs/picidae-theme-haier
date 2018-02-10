@@ -54,11 +54,14 @@ module.exports = {
       }
     ],
 
-
     logo: {
       src: 'https://github.com/picidaejs/picidaejs/raw/master/logo/picidae-2x.png',
       name: 'Haier'
     },
+
+    // work on title
+    description: '🍔 The universal picidae theme for project / library / framework etc.',
+
     headers: [
       'docs', 'api', 'help', /*'blog',*/
       // spec
