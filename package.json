@@ -10,7 +10,8 @@
   },
   "files": [
     "pages",
-    "index.js"
+    "index.js",
+    "ssr.js"
   ],
   "keywords": [
     "imcuttle",
