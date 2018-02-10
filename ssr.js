@@ -8,7 +8,6 @@
 var documentTitle = require('react-document-title')
 
 module.exports = function (gift) {
-  var themeConfig = gift.themeConfig
   var title = documentTitle.rewind()
 
   return {

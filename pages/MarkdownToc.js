@@ -168,7 +168,7 @@ export default class MarkdownToc extends React.PureComponent {
     return (
 
       <div className='docMainWrapper wrapper'>
-        <Title title={`${d.page.curr.title} - ${themeConfig.logo.name}`} />
+        <Title title={`${d.page.curr ? d.page.curr.title : ''} - ${themeConfig.logo.name}`} />
         {this.renderSideBar(d)}
         <div className='container mainContainer'>
           <div className='wrapper'>
