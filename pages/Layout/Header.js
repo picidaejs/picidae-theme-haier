@@ -156,7 +156,6 @@ export default class Header extends React.PureComponent {
     if (this.shouldSearchRegister()) {
       // done = true
       const docsearch = require('docsearch.js')
-      console.log('docsearch [OK]')
       require('docsearch.js/dist/cdn/docsearch.css')
       docsearch({
         apiKey: '60ac2c1a7d26ab713757e4a081e133d0',

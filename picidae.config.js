@@ -8,5 +8,8 @@
 module.exports = {
   docRoot: './test',
   theme: './',
-  publicPath: '/picidae-theme-haier/'
+  publicPath: '/picidae-theme-haier/',
+  transformers: [
+    'picidae-transformer-toc?force=false&test=<toc>'
+  ]
 }
