@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
-title_zh: "介绍"
-order: 1
+title: "Document"
+title_zh: "文档"
+order: 2
 ---

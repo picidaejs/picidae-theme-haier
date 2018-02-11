@@ -15,12 +15,12 @@ export default
   // footerBgColor = '#218080',
   // themeColor = '#99424f',
   themeColor = '#218080',
+  loadingColor = p.complement(themeColor),
   bodyColor = '#393939'
 }) => {
   const dThemeColor = p.darken(0, themeColor)
   const lThemeColor = p.lighten(.1, themeColor)
   const oThemeColor = p.opacify(.3, themeColor)
-  const loadingColor = p.complement(themeColor)
 
   return (
     <style type={'text/css'}>

@@ -227,20 +227,22 @@ header h2 {
 .mainContainer .wrapper strong, .mainContainer .wrapper b {
   font-weight: bold;
 }
+.container:not(.documentContainer) .wrapper {
+  h1, h2 {
+    text-align: left;
+  }
+}
 .container .wrapper h1 {
   font-size: 210%;
   line-height: 1em;
   margin: 12px 0 0 0;
   padding: .6em 0 .6em;
-
-  text-align: left;
 }
 .container .wrapper h2 {
   color: #fff;
   font-size: 22px;
   line-height: 1em;
   margin-top: 8px;
-  text-align: left;
   padding: 10px 0;
 }
 .container .wrapper h2.blockHeader {
@@ -284,7 +286,7 @@ header h2 {
 .mainContainer .wrapper ol li, .mainContainer .wrapper ul li {
   margin: 0 0 10px 0;
 }
-.mainContainer .wrapper p,
+.mainContainer:not(.documentContainer) .wrapper p,
 .blockElement p,
 .mainContainer .wrapper ul li,
 .mainContainer .wrapper ol li {

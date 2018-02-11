@@ -82,7 +82,7 @@ export default class Layout extends React.PureComponent {
             <img src={footer.organization.logo}/>
           </a>}
           <section className="copyright">
-            {footer ? footer.copyright : ''}<br/>
+            <p style={{ marginBottom: 5 }} dangerouslySetInnerHTML={{__html: footer ? footer.copyright : ''}}/>
             Powered by <a href={'https://github.com/picidaejs/picidae-theme-haier'} target={'_blank'}>🍔 Haier</a>.
           </section>
         </footer>

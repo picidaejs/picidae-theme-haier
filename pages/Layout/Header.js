@@ -183,8 +183,8 @@ export default class Header extends React.PureComponent {
         <div className="headerWrapper wrapper">
           <header>
             <Link to="/">
-              <img className="logo" src={logo.src}/>
-              <h2 className="headerTitle">{logo.name}</h2>
+              {logo.src && <img className="logo" src={logo.src}/>}
+              {logo.name && <h2 className="headerTitle">{logo.name}</h2>}
             </Link>
             <div className="navigationWrapper navigationSlider">
               <nav className="slidingNav">

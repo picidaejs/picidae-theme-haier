@@ -63,7 +63,7 @@ module.exports = {
     ],
 
     logo: {
-      src: 'https://github.com/picidaejs/picidaejs/raw/master/logo/picidae-2x.png',
+      // src: 'https://github.com/picidaejs/picidaejs/raw/master/logo/picidae-2x.png',
       name: 'Haier'
     },
 
@@ -86,12 +86,16 @@ module.exports = {
       indexName: 'jest'
     },
 
+    style: {
+      loadingColor: '#dd2f3d'
+    },
+
     footer: {
       organization: {
         to: 'https://github.com/picidaejs/picidaejs',
         logo: 'https://github.com/picidaejs/picidaejs/raw/master/logo/picidae-2x.png'
       },
-      copyright: 'Copyright © 2018 - Powered by Picidae.'
+      copyright: 'Copyright © 2018 - Built by Picidae'
     }
   }
 }
