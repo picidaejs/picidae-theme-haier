@@ -40,6 +40,14 @@ export default class Layout extends React.PureComponent {
     }
   }
 
+  state = {
+    sidebarVisible: false
+  }
+
+  setSidebarVisible = visible => {
+    this.setState({ sidebarVisible: visible })
+  }
+
   render() {
     const { children, location, themeConfig, ...rest } = this.props
     const { footer } = themeConfig
@@ -48,7 +56,7 @@ export default class Layout extends React.PureComponent {
 
 
     return (
-      <div className={c(location.pathname.replace(/^\/+/, '').includes('/') && 'sideNavVisible')}>
+      <div className={c(this.state.sidebarVisible && 'sideNavVisible')}>
         <Style {...themeConfig.style} />
         <Header
           {...themeConfig}
@@ -62,7 +70,9 @@ export default class Layout extends React.PureComponent {
           }}
         />
         <div className="navPusher">
-          {children}
+          {React.Children.toArray(children).map(child => (
+            React.cloneElement(child, { ...child.props, setSidebarVisible: this.setSidebarVisible })
+          ))}
         </div>
         <footer className='nav-footer'>
           {footer && footer.organization && <a

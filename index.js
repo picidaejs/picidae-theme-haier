@@ -36,6 +36,14 @@ module.exports = {
         component: './MarkdownToc',
       },
       {
+        path: 'api',
+        component: './MarkdownToc',
+      },
+      {
+        path: 'docs',
+        component: './MarkdownToc',
+      },
+      {
         path: '*',
         component: './Markdown',
       }

@@ -19,10 +19,15 @@ exports.getLangByPath = function (pathname = '') {
 
 exports.getPathFromLang = function (lang = 'en', prevPath) {
   if (lang === 'en') {
-    return prevPath.replace(/_zh\s*$/, '')
+    return prevPath
+      .replace(/_zh\s*$/, '')
+      .replace(/\/index$/, '/')
   }
   if (prevPath === '' || prevPath === '/') {
     prevPath = 'index'
+  }
+  if (prevPath.endsWith('/')) {
+    prevPath = prevPath + 'index'
   }
   // lang === 'zh'
   return prevPath.replace(/_zh\s*$/, '')

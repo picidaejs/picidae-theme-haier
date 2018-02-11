@@ -11,6 +11,12 @@ import { exists } from './locale'
 
 @collect()
 export default class Markdown extends React.PureComponent {
+  componentWillMount() {
+    if (this.props.setSidebarVisible) {
+      this.props.setSidebarVisible(false)
+    }
+  }
+
   render() {
     const { render, pageData, themeConfig, location: { pathname } } = this.props
     const i18nKey = 'title.' + pathname.replace(/_zh$/, '')

@@ -19,6 +19,11 @@ function warnNoInformation(inforPath) {
 
 @collect()
 export default class MarkdownToc extends React.PureComponent {
+  componentWillMount() {
+    if (this.props.setSidebarVisible) {
+      this.props.setSidebarVisible(true)
+    }
+  }
   state = {
     active: false
   }

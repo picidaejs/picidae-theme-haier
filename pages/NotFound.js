@@ -9,6 +9,11 @@ import React from 'picidae/exports/react'
 import Title from 'react-document-title'
 
 export default class NotFound extends React.Component {
+  componentWillMount() {
+    if (this.props.setSidebarVisible) {
+      this.props.setSidebarVisible(false)
+    }
+  }
 
   render() {
     const { themeConfig } = this.props
