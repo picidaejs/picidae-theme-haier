@@ -169,7 +169,7 @@ export default class MarkdownToc extends React.PureComponent {
   render() {
     const d = this.getData()
     const { render, pageData, location, themeConfig } = this.props
-    const githubHref = u.parseGithubRepo(themeConfig.repository, location.pathname)
+    const githubHref = u.parseGithubRepo(themeConfig.repository, pageData.meta.filename)
     return (
 
       <div className='docMainWrapper wrapper'>
