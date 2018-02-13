@@ -31,7 +31,9 @@
     "react-document-title": "^2.0.3"
   },
   "devDependencies": {
-    "picidae": "^2.1.10",
-    "picidae-transformer-toc": "^1.1.2"
+    "picidae": "^2.1.12",
+    "picidae-transformer-file-syntax": "^0.1.0",
+    "picidae-transformer-mark": "0.0.0",
+    "picidae-transformer-toc": "^1.1.3"
   }
 }

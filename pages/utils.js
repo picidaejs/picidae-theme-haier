@@ -131,7 +131,7 @@ export function removeInformation(list = []) {
 }
 
 export function getSort(stringKey) {
-  return (a, b) => {
+  return function (a, b) {
     if (!('order' in a) || !('order' in b)) {
       return a[stringKey].localeCompare(b[stringKey])
     }

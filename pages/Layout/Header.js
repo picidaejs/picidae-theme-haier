@@ -133,8 +133,8 @@ export default class Header extends React.PureComponent {
           {__('header.' + type)}
         </Link></li>
       default:
-        return <li key={type}><Link to={'/' + type}>
-          {type}
+        return !!type && !!type.url && <li key={type.url}><Link to={type.url.replace(/^\/*/, '/')}>
+          {type.i18n ? type.i18n[language] : type.name}
         </Link></li>
     }
   }

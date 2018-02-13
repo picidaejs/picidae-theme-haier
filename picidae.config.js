@@ -9,7 +9,10 @@ module.exports = {
   docRoot: './test',
   theme: './',
   publicPath: '/picidae-theme-haier/',
+  verbose: false,
   transformers: [
-    'picidae-transformer-toc?force=false&test=<toc>'
+    'picidae-transformer-toc?force=false&test=<toc>',
+    'picidae-transformer-file-syntax',
+    'mark',
   ]
 }

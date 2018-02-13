@@ -7,6 +7,7 @@
 import React from 'picidae/exports/react'
 import collect from 'picidae-tools/browser/collect'
 import { getLang } from './locale'
+import { getSort } from './utils'
 import * as u from './utils'
 import { Link } from './utils'
 import c from 'classname'
@@ -49,7 +50,11 @@ export default class MarkdownToc extends React.PureComponent {
       if (lang !== getLang()) {
         return
       }
-      let groupName = key.split('/')[0]
+      let chunks = key.split('/')
+      if (!chunks[0] || chunks.length <= 1) {
+        return
+      }
+      let groupName = chunks[0]
       document[groupName] = document[groupName] || []
       document[groupName].push({
         ...meta[key],
@@ -78,12 +83,12 @@ export default class MarkdownToc extends React.PureComponent {
     const page = {}
     let flag = false
     groupNames.some(g => {
-      return document[g].some(d => {
+      return document[g].sort(getSort('_key')).some(d => {
         if (flag === true) {
           page.next = d
           return true
         }
-        if (d._key === pathname) {
+        if (d.filename === pageData.meta.filename) {
           flag = true
           page.curr = d
           return
@@ -103,7 +108,7 @@ export default class MarkdownToc extends React.PureComponent {
   renderGroups({ groupNames, info, document }) {
     const { render, pageData, pluginData: { utils }, data: { meta }, location: { pathname } } = this.props
     const renderLi = d => {
-      const active = d._key === pathname
+      const active = d.filename === pageData.meta.filename
       return (
         <li key={d._key} className={c('navListItem', active && 'navItemActive')}>
           <Link to={d._key} className={active ? 'navItemActive' : ''}>{d.title}</Link>
@@ -117,7 +122,7 @@ export default class MarkdownToc extends React.PureComponent {
         <h3>{u.pickByLang(info[groupName], 'title')}</h3>
         <ul>
           {
-            document[groupName].map(renderLi)
+            document[groupName].sort(getSort('_key')).map(renderLi)
           }
         </ul>
       </div>
@@ -171,7 +176,6 @@ export default class MarkdownToc extends React.PureComponent {
     const { render, pageData, location, themeConfig } = this.props
     const githubHref = u.parseGithubRepo(themeConfig.repository, pageData.meta.filename)
     return (
-
       <div className='docMainWrapper wrapper'>
         <Title title={`${d.page.curr ? d.page.curr.title : ''} - ${themeConfig.logo.name}`} />
         {this.renderSideBar(d)}
