@@ -92,12 +92,12 @@ module.exports = {
       // spec
       'i18n', 'search', 'github'
     ],
-    repository: 'picidaejs/picidae-theme-haier',
-    // repository: {
-    //   repo: 'https://github.com/picidaejs/picidae-theme-haier',
-    //   branch: 'master',
-    //   prefix: 'test'
-    // },
+    // repository: 'picidaejs/picidae-theme-haier',
+    repository: {
+      repo: 'https://github.com/picidaejs/picidae-theme-haier',
+      branch: 'master',
+      prefix: 'test'
+    },
 
     search: {
       apiKey: '833906d7486e4059359fa58823c4ef56',
