@@ -1,5 +1,5 @@
 ---
-title: "Document"
-title_zh: "文档"
+title: "Test Documents"
+title_zh: "测试文档"
 order: 2
 ---
