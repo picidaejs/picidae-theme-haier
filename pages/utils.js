@@ -52,18 +52,21 @@ exports.injectScript = function (src, callback) {
   script.onerror = function (error) {
     callback && callback(error)
   }
+  document.head.appendChild(script)
 }
 
 exports.injectStyle = function (src, callback) {
   const link = document.createElement('link')
   link.href = src
-  link.ref = 'stylesheet'
+  link.rel = 'stylesheet'
+  link.type = 'text/css'
   link.onload = function () {
     callback && callback(null)
   }
   link.onerror = function (error) {
     callback && callback(error)
   }
+  document.head.appendChild(link)
 }
 
 export function parseGithubRepo(repository, xpath) {

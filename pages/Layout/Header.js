@@ -16,15 +16,13 @@ import {
   parseGithubRepo
 } from '../utils'
 import { getLang, switchLang } from '../locale'
-import nps from 'path'
 
 const lang2Label = {
   'en': 'English',
   'zh': '中文'
 }
 
-let done = false
-
+let status
 export default class Header extends React.PureComponent {
   static defaultProps = {
     logo: {
@@ -121,7 +119,7 @@ export default class Header extends React.PureComponent {
           return null
         }
         return <li key={'search'} className="navSearchWrapper reactNavSearchWrapper">
-          <input type={'text'} id={'doc-search-input'}
+          <input ref={r => this.searchInput = r} type={'text'} id={'doc-search-input'}
                  placeholder={__('header.search.placeholder')}/>
         </li>
       case 'github':
@@ -139,12 +137,48 @@ export default class Header extends React.PureComponent {
     }
   }
 
+  handleKeyUp = event => {
+    if (
+      event.keyCode === 70
+      && event.target === document.body
+      // && (event.metaKey || event.ctrlKey)
+    ) {
+      this.searchInput.focus()
+      event.preventDefault()
+    }
+  }
+
   componentDidMount() {
-    this.regSearch()
+    let sep = 0
+    if (!status && this.shouldSearchRegister()) {
+      status = 'pending'
+      // require docsearch.js
+      // will throw zepto.js error
+      // don't know the reason
+      injectScript('https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js', err => {
+        sep++
+        if (sep === 2) {
+          status = 'done'
+        }
+        this.regSearch()
+      })
+      injectStyle('https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css', function () {
+        sep++
+        if (sep === 2) {
+          status = 'done'
+        }
+      })
+    }
+    if (status === 'done') {
+      this.regSearch()
+    }
+    document.addEventListener('keydown', this.handleKeyUp)
+  }
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyUp)
   }
 
   componentDidUpdate() {
-    this.regSearch()
   }
 
   shouldSearchRegister() {
@@ -153,17 +187,13 @@ export default class Header extends React.PureComponent {
   }
 
   regSearch() {
+    const { search } = this.props
     if (this.shouldSearchRegister()) {
-      // done = true
-      const docsearch = require('docsearch.js')
-      require('docsearch.js/dist/cdn/docsearch.css')
       docsearch({
-        apiKey: '60ac2c1a7d26ab713757e4a081e133d0',
-        indexName: 'ant_design',
+        ...search,
         inputSelector: '#doc-search-input',
         algoliaOptions: { facetFilters: [`tags:${getLang()}`] },
         transformData(hits) {
-          debugger
           hits.forEach((hit) => {
             hit.url = hit.url.replace('ant.design', location.host);
             hit.url = hit.url.replace('https:', location.protocol);

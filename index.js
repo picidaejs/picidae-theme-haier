@@ -100,8 +100,8 @@ module.exports = {
     },
 
     search: {
-      apiKey: '833906d7486e4059359fa58823c4ef56',
-      indexName: 'jest'
+      apiKey: '775577a5c1951d4c202e59d73aa02cef',
+      indexName: 'haier'
     },
 
     style: {

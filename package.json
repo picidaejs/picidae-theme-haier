@@ -26,7 +26,6 @@
   "license": "MIT",
   "dependencies": {
     "classname": "0.0.0",
-    "docsearch.js": "^2.5.2",
     "picidae-tools": "^0.0.3",
     "polished": "^1.9.2",
     "react-document-title": "^2.0.3"
