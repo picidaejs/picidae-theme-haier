@@ -33,6 +33,23 @@ export default class Layout extends React.PureComponent {
   }
 
   componentDidMount() {
+    if (location.hash) {
+      const id = decodeURIComponent(location.hash.substring(1))
+
+      ;[
+        document.querySelector('#' + id),
+        document.querySelector(`[name=${JSON.stringify(id)}]`)
+      ].some(dom => {
+        if (dom) {
+          setTimeout(() => {
+            dom.scrollIntoView()
+          }, 500)
+          return true
+        }
+      })
+
+    }
+
     if (typeof window.ga !== 'undefined') {
       this.context.router.listen(loc => {
         window.ga('send', 'pageview', loc.pathname + loc.search)
