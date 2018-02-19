@@ -137,9 +137,10 @@ export default class Header extends React.PureComponent {
     }
   }
 
-  handleKeyUp = event => {
+  handleKeyDown = event => {
     if (
-      event.keyCode === 70
+      // 'S'
+      event.keyCode === 83
       && event.target === document.body
       // && (event.metaKey || event.ctrlKey)
     ) {
@@ -171,10 +172,10 @@ export default class Header extends React.PureComponent {
     if (status === 'done') {
       this.regSearch()
     }
-    document.addEventListener('keydown', this.handleKeyUp)
+    document.addEventListener('keydown', this.handleKeyDown)
   }
   componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyUp)
+    document.removeEventListener('keydown', this.handleKeyDown)
   }
 
   componentDidUpdate() {
