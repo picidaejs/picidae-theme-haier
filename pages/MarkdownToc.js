@@ -35,11 +35,17 @@ export default class MarkdownToc extends React.PureComponent {
   }
 
   getData() {
-    const { render, pageData, pluginData: { utils }, data: { meta }, location: { pathname } } = this.props
-    const document = {
-      docs: u.filter(utils.group('docs')),
-      api: u.filter(utils.group('api'))
+    const { pageData, pluginData: { utils }, data: { meta } } = this.props
+    const document = {}
+    let list = u.filter(utils.group('api'))
+    if (list && !!list.length) {
+      document.api = list
     }
+    list = u.filter(utils.group('docs'))
+    if (list && !!list.length) {
+      document.docs = list
+    }
+
     const others = Object.keys(meta) // @TODO blog /^(docs|api|blog)\/|^help(_zh)?$|^index(_zh)?$|^[^\/]$/
                    .filter(key => !/^(docs|api)\/|^help(_zh)?$|^index(_zh)?$|^[^\/]$/.test(key))
     others.forEach(key => {

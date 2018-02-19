@@ -662,7 +662,7 @@ input[type="search"] {
   width: 3px;
   z-index: 1;
 }
-.navSearchWrapper .aa-dropdown-menu {
+.navSearchWrapper .ds-dropdown-menu {
   background: #f9f9f9;
   border: 3px solid rgba(57, 57, 57, 0.25);
   color: #393939;
@@ -671,25 +671,56 @@ input[type="search"] {
   line-height: 1.2em;
   right: 0 !important;
 }
-.navSearchWrapper .aa-dropdown-menu .algolia-docsearch-suggestion--category-header {
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--category-header {
+  //background: #99424f;
   background: #fff;
   color: white;
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif;
   font-weight: 400;
   font-size: 14px;
 }
-.navSearchWrapper .aa-dropdown-menu .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight {
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight {
+  //background-color: #99424f;
   background-color: #fff;
   color: #fff;
 }
-.navSearchWrapper .aa-dropdown-menu .algolia-docsearch-suggestion--title .algolia-docsearch-suggestion--highlight,
-.navSearchWrapper .aa-dropdown-menu .algolia-docsearch-suggestion--subcategory-column .algolia-docsearch-suggestion--highlight {
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--title .algolia-docsearch-suggestion--highlight,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--subcategory-column .algolia-docsearch-suggestion--highlight {
   color: #fff;
+  //color: #99424f;
 }
-.navSearchWrapper .aa-dropdown-menu .algolia-docsearch-suggestion__secondary,
-.navSearchWrapper .aa-dropdown-menu .algolia-docsearch-suggestion--subcategory-column {
+.navSearchWrapper .algolia-autocomplete .ds-dropdown-menu {
+  background: #f9f9f9;
+  border: 3px solid rgba(57, 57, 57, 0.25);
+  color: #393939;
+  font-size: 14px;
+  padding: 4px;
+  [class^=ds-dataset-] {
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    border-radius: 0;
+
+    .ds-suggestions {
+      margin-top: 0;
+      .algolia-docsearch-suggestion {
+        padding-left: 0;
+        padding-right: 0;
+
+        .algolia-docsearch-suggestion--category-header {
+          margin-top: 0;
+          border-radius: 0;
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+}
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion__secondary,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--subcategory-column {
   border-color: rgba(57, 57, 57, 0.3);
 }
+
 input#doc-search-input {
   padding-left: 25px;
   font-size: 14px;
@@ -995,7 +1026,7 @@ pre code {
   white-space: nowrap;
   margin: 0;
 }
-.navigationSlider .slidingNav ul li a {
+.navigationSlider .slidingNav ul li > a {
   color: #fff;
   display: flex;
   align-items: center;
@@ -1009,8 +1040,8 @@ pre code {
   box-sizing: border-box;
   font-size: 0.9em;
 }
-.navigationSlider .slidingNav ul li a:focus,
-.navigationSlider .slidingNav ul li a:hover {
+.navigationSlider .slidingNav ul li > a:focus,
+.navigationSlider .slidingNav ul li > a:hover {
   background: #fff;
 }
 
@@ -1122,7 +1153,7 @@ ul#languages li {
   .reactNavSearchWrapper > span {
     width: 100%;
   }
-  .reactNavSearchWrapper .aa-dropdown-menu {
+  .reactNavSearchWrapper .algolia-autocomplete .ds-dropdown-menu {
     background: #f9f9f9;
     border: 0px solid #f9f9f9;
     color: #393939;
@@ -1132,7 +1163,7 @@ ul#languages li {
     min-width: auto;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    padding: 0;
+    padding: 4px;
     border-radius: 0;
     position: relative !important;
     width: 100%;
@@ -1149,6 +1180,7 @@ ul#languages li {
     flex-direction: row;
   }
 }
+
 @media only screen and (min-width: 736px) {
   .navSearchWrapper {
     position: relative;
@@ -1183,7 +1215,7 @@ ul#languages li {
     background: none;
     width: auto;
   }
-  .navigationSlider .slidingNav ul li a {
+  .navigationSlider .slidingNav ul li > a {
     border: 0;
     color: rgba(255, 255, 255, 0.8);
     display: flex;
@@ -1196,10 +1228,10 @@ ul#languages li {
     height: 32px;
     font-size: 1em;
   }
-  .navigationSlider .slidingNav ul li a:hover {
+  .navigationSlider .slidingNav ul li > a:hover {
     color: #fff;
   }
-  .navigationSlider .slidingNav ul li.navItemActive a {
+  .navigationSlider .slidingNav ul li.navItemActive > a {
     color: #fff;
   }
 }

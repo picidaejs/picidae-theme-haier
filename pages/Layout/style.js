@@ -31,8 +31,6 @@ footer .copyright {
 footer.nav-footer {
   background-color: ${footerBgColor}
 }
-.navSearchWrapper .aa-dropdown-menu .algolia-docsearch-suggestion--title .algolia-docsearch-suggestion--highlight,
-.navSearchWrapper .aa-dropdown-menu .algolia-docsearch-suggestion--subcategory-column .algolia-docsearch-suggestion--highlight,
 .showcaseSection .prose h1,
 .productShowcaseSection h2,
 nav.toc .toggleNav ul li a.navItemActive,
@@ -58,13 +56,13 @@ code {
 }
 .fixedHeaderContainer,
 .button:hover,
-.navSearchWrapper .aa-dropdown-menu .algolia-docsearch-suggestion--category-header,
-.navSearchWrapper .aa-dropdown-menu .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight,
 nav.toc .toggleNav .navGroup.navGroupActive h3,
-.navigationSlider .slidingNav ul li a:focus,
-.navigationSlider .slidingNav ul li a:hover,
-.navigationSlider .slidingNav ul li a,
+.navigationSlider .slidingNav ul li > a:focus,
+.navigationSlider .slidingNav ul li > a:hover,
+.navigationSlider .slidingNav ul li > a,
 .mainContainer .wrapper .post .docPagination,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--category-header,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight,
 ul#languages-dropdown-items {
   background-color: ${themeColor}
 }
@@ -81,6 +79,8 @@ ul#languages-dropdown-items {
 pre code {
   border-left-color: ${themeColor};
 }
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--title .algolia-docsearch-suggestion--highlight,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--subcategory-column .algolia-docsearch-suggestion--highlight,
 .darkBackground a,
 .darkBackground code {
   color: ${lThemeColor}

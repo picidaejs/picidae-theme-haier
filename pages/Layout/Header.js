@@ -152,8 +152,7 @@ export default class Header extends React.PureComponent {
     let sep = 0
     if (!status && this.shouldSearchRegister()) {
       status = 'pending'
-      // require docsearch.js
-      // will throw zepto.js error
+      // require('docsearch.js') will throw zepto.js error
       // don't know the reason
       injectScript('https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js', err => {
         sep++
@@ -193,14 +192,7 @@ export default class Header extends React.PureComponent {
         ...search,
         inputSelector: '#doc-search-input',
         algoliaOptions: { facetFilters: [`tags:${getLang()}`] },
-        transformData(hits) {
-          hits.forEach((hit) => {
-            hit.url = hit.url.replace('ant.design', location.host);
-            hit.url = hit.url.replace('https:', location.protocol);
-          });
-          return hits;
-        },
-        debug: true, // Set debug to true if you want to inspect the dropdown
+        debug: process.env.NODE_ENV !== 'production'
       });
     }
   }
