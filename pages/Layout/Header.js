@@ -139,10 +139,10 @@ export default class Header extends React.PureComponent {
 
   handleKeyDown = event => {
     if (
-      // 'S'
-      event.keyCode === 83
+      // 'F'
+      event.keyCode === 70
       && event.target === document.body
-      // && (event.metaKey || event.ctrlKey)
+      && !(event.metaKey || event.ctrlKey)
     ) {
       this.searchInput.focus()
       event.preventDefault()
