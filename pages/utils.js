@@ -10,17 +10,30 @@ import React from 'picidae/exports/react'
 import { Link } from 'picidae/exports/react-router'
 import { getLang } from './locale/index'
 
-exports.getLangByPath = function (pathname = '') {
-  if (/_zh\s*$/.test(pathname)) {
-    return 'zh'
+let defaultLang = 'en'
+let oppositeLang = 'zh'
+
+exports.setDefaultLang = function (lang = 'en') {
+  defaultLang = lang
+  if (defaultLang === 'en') {
+    oppositeLang = 'zh'
   }
-  return 'en'
+  else {
+    oppositeLang = 'en'
+  }
 }
 
-exports.getPathFromLang = function (lang = 'en', prevPath) {
-  if (lang === 'en') {
+exports.getLangByPath = function (pathname = '') {
+  if (new RegExp('_' + oppositeLang + '\s*', 'g').test(pathname)) {
+    return oppositeLang
+  }
+  return defaultLang
+}
+
+exports.getPathFromLang = function (lang = defaultLang, prevPath) {
+  if (lang === defaultLang) {
     return prevPath
-      .replace(/_zh\s*$/, '')
+      .replace(new RegExp('_' + oppositeLang + '\s*'), '')
       .replace(/\/index$/, '/')
   }
   if (prevPath === '' || prevPath === '/') {
@@ -30,17 +43,17 @@ exports.getPathFromLang = function (lang = 'en', prevPath) {
     prevPath = prevPath + 'index'
   }
   // lang === 'zh'
-  return prevPath.replace(/_zh\s*$/, '')
-                 .replace(/\/+$/, '') + '_zh'
+  return prevPath.replace(new RegExp('_' + oppositeLang + '\s*'), '')
+                 .replace(/\/+$/, '') + '_' + oppositeLang
 }
 
 
 export function filterLangDocs(docs = []) {
-  if (getLang() === 'en') {
-    return docs.filter(d => !d._key.endsWith('_zh'))
+  if (getLang() === defaultLang) {
+    return docs.filter(d => !d._key.endsWith('_' + oppositeLang))
   }
 
-  return docs.filter(d => d._key.endsWith('_zh'))
+  return docs.filter(d => d._key.endsWith('_' + oppositeLang))
 }
 
 exports.injectScript = function (src, callback) {
@@ -120,11 +133,11 @@ export function u(url) {
     return url
   }
   const l = getLang()
-  if (l === 'zh' && exports.getLangByPath(url) !== 'zh') {
+  if (l === oppositeLang && exports.getLangByPath(url) !== oppositeLang) {
     if (url === '' || url === '/') {
       url = 'index'
     }
-    return url + '_zh'
+    return url + '_' + oppositeLang
   }
   return url
 }

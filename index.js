@@ -70,6 +70,8 @@ module.exports = {
     // work on title
     description: '🍔 The universal picidae theme for project / library / framework etc.',
 
+    defaultLang: 'en',
+
     headers: [
       /*'docs', 'api', */
       {

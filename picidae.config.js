@@ -8,11 +8,13 @@
 module.exports = {
   docRoot: './test',
   theme: './',
+  port: 10000,
   publicPath: '/picidae-theme-haier/',
   verbose: false,
   transformers: [
     'picidae-transformer-toc?force=false&test=<toc>',
     'picidae-transformer-file-syntax',
+    // 'picidae-transformer-file-syntax',
     'mark',
   ]
 }

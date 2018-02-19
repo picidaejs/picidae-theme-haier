@@ -24,10 +24,10 @@ yarn global add picidae
 ```bash
 picidae init my-docs
 cd my-docs
-# 全局安装 Haier
-picidae use picidae-theme-haier
-# 或者本地安装 picidae 和 Haier
+# 本地安装 picidae 和 Haier
 npm install picidae picidae-theme-haier --save # 更推荐
+# 或者全局安装 Haier
+picidae use picidae-theme-haier
 ```
 
 ### 修改 picidae 配置

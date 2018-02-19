@@ -6,6 +6,15 @@ order: 3
 <TOC>
 ---
 
+### `defaultLang`
+_==string==_ `'en' | 'zh'` (默认: `'en'`)
+当为`'en'`时，页面默认语言是英文，文档中对应的关系为:  
+`abc.md` 对应英文，`abc_zh.md` 对应中文
+ 
+当为`'en'`时，页面默认语言是中文，文档中对应的关系为:  
+`abc.md` 对应中文，`abc_en.md` 对应英文
+
+
 ### `logo`
 _==Object==_
 - `src` _==string==_ Logo 图像的来源 (_可选_，默认: `undefined`)

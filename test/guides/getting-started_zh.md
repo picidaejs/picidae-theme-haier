@@ -48,6 +48,8 @@ title: hello
 | api/hello-haier.md | /api/hello-haier | 英文环境下的 API 文档，支持 title（对应页面标题），order（同级排序序号，从小到大）|
 | api/hello-haier_zh.md | /api/hello-haier_zh | 同上，中文环境 |
 
+**注意：** `abc.md` 不一定对应英文环境，需要看[配置](./configuration_zh.md#defaultlang)中的 `defaultLang`
+
 其中，`api/hello-haier.md` 中的支持的 yaml-front order 数据，表示的是同级文档下的排序关系，
 如还存在文档 `api/hello-picidae.md`，那么页面上渲染的相对顺序是按照 order 来渲染的（从小到大）。
 

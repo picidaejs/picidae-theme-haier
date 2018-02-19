@@ -21,6 +21,9 @@ export default class Layout extends React.PureComponent {
   constructor(props) {
     super(props)
     const { pathname } = props.location
+    if (props.themeConfig.defaultLang) {
+      u.setDefaultLang(props.themeConfig.defaultLang)
+    }
     switchLang(u.getLangByPath(pathname))
 
     const transformers = this.props.data.transformers
@@ -33,6 +36,11 @@ export default class Layout extends React.PureComponent {
   }
 
   componentDidMount() {
+    const location = this.props.location
+    if (this.currentPathname === location.pathname) {
+      return
+    }
+    this.currentPathname = location.pathname
     if (location.hash) {
       const id = decodeURIComponent(location.hash.substring(1))
 
