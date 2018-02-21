@@ -44,18 +44,21 @@ export default class Layout extends React.PureComponent {
     if (location.hash) {
       const id = decodeURIComponent(location.hash.substring(1))
 
-      ;[
-        document.querySelector('#' + id),
-        document.querySelector(`[name=${JSON.stringify(id)}]`)
-      ].some(dom => {
-        if (dom) {
-          setTimeout(() => {
-            dom.scrollIntoView()
-          }, 500)
-          return true
-        }
-      })
-
+      try {
+        ;[
+          document.querySelector('#' + id),
+          document.querySelector(`[name=${JSON.stringify(id)}]`)
+        ].some(dom => {
+          if (dom) {
+            setTimeout(() => {
+              dom.scrollIntoView()
+            }, 500)
+            return true
+          }
+        })
+      } catch (ex) {
+        console.error(ex)
+      }
     }
 
     if (typeof window.ga !== 'undefined') {
