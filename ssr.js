@@ -6,12 +6,15 @@
  */
 
 var documentTitle = require('react-document-title')
+var style = require('react-document-style')
 
 module.exports = function (gift) {
   var title = documentTitle.rewind()
+  var cssText = style.rewind()
 
   return {
-    title: title
+    title: title,
+    css: cssText
   }
 }
 

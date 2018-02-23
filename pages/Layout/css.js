@@ -22,9 +22,7 @@ export default
   const lThemeColor = p.lighten(.1, themeColor)
   const oThemeColor = p.opacify(.3, themeColor)
 
-  return (
-    <style type={'text/css'}>
-      {`
+  return `
 footer .copyright {
   color: ${copyrightColor}
 }
@@ -165,7 +163,5 @@ pre code {
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-`}
-    </style>
-  )
+`.trim()
 }

@@ -28,6 +28,7 @@
     "classname": "0.0.0",
     "picidae-tools": "^0.0.3",
     "polished": "^1.9.2",
+    "react-document-style": "0.0.1",
     "react-document-title": "^2.0.3"
   },
   "devDependencies": {

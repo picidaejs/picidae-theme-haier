@@ -13,7 +13,8 @@ import { switchLang } from '../locale'
 import '../style/index.less'
 import Header from './Header'
 import transformer from '../transformer'
-import Style from './style'
+import css from './css'
+import DocumentStyle from 'react-document-style'
 
 const t = transformer()
 
@@ -81,11 +82,13 @@ export default class Layout extends React.PureComponent {
     const { footer } = themeConfig
     const meta = this.props.data.meta
     const utils = this.props.pluginData.utils
-
+    const cssText = css(themeConfig.style)
 
     return (
-      <div className={c(this.state.sidebarVisible && 'sideNavVisible')}>
-        <Style {...themeConfig.style} />
+      <div
+        className={c(this.state.sidebarVisible && 'sideNavVisible')}>
+        <DocumentStyle css={cssText} />
+        {/*<style type="text/css" dangerouslySetInnerHTML={{ __html: cssText }} />*/}
         <Header
           {...themeConfig}
           pathname={location.pathname}
