@@ -9,7 +9,7 @@ order: 4
 Haier supports picidae ssr and provides `title` and `css`.
 We recommend the template html as follows.
 
-```html
+```text
 <!DOCTYPE html>
 <html>
 <head>

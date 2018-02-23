@@ -9,7 +9,7 @@ order: 4
 Haier 支持 Picidae 主题服务器渲染，提供 `title` 和 `css` 数据用于渲染。
 推荐使用的 HTML 模板如下：
 
-```html
+```text
 <!DOCTYPE html>
 <html>
 <head>
