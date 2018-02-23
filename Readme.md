@@ -20,7 +20,7 @@ We recommend the template html as follows:
   <!--NOTE-->
   <title> {{ themeData.title }} </title>
   <!--NOTE-->
-  <style type="text/css"> {{ themeData.css }} </style>
+  <style type="text/css"> {{ themeData.css | safe }} </style>
   <link rel="stylesheet" href="{{ root }}style.css">
 </head>
 <body>
