@@ -18,9 +18,9 @@ We recommend the template html as follows.
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--NOTE-->
   <title> {{ themeData.title }} </title>
+  <link rel="stylesheet" href="{{ root }}style.css">
   <!--NOTE-->
   <style type="text/css"> {{ themeData.css | safe }} </style>
-  <link rel="stylesheet" href="{{ root }}style.css">
 </head>
 <body>
 <div id="root">

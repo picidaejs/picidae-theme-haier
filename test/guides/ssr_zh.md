@@ -18,9 +18,9 @@ Haier 支持 Picidae 主题服务器渲染，提供 `title` 和 `css` 数据用�
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--注意-->
   <title> {{ themeData.title }} </title>
+  <link rel="stylesheet" href="{{ root }}style.css">
   <!--注意-->
   <style type="text/css"> {{ themeData.css | safe }} </style>
-  <link rel="stylesheet" href="{{ root }}style.css">
 </head>
 <body>
 <div id="root">
