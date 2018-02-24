@@ -16,6 +16,7 @@ module.exports = {
     'picidae-transformer-toc?force=false&test=<toc>',
     'picidae-transformer-file-syntax',
     // 'picidae-transformer-file-syntax',
-    'mark',
+    // 'mark',
+    'remark-mark'
   ]
 }

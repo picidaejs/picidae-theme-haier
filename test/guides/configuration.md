@@ -7,7 +7,7 @@ order: 3
 ---
 
 ## `logo`
-_==Object==_
+==<Object\>==
 
 - `src` _==string==_ the image source of logo (default: `undefined`)
 - `name` _==string==_ the name of logo (default: `Haier`)
