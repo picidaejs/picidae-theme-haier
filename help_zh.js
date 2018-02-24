@@ -1,0 +1,2 @@
+webpackJsonp([2,20],{887:function(e,i){e.exports={content:'<h2 id="help"><a href="#help" aria-hidden="true"><span class="icon icon-link"></span></a>Help</h2>\n<p>🍔 欢迎你提交你的问题到<a href="https://github.com/picidaejs/picidae-theme-haier/issues">Haier 仓库</a><br>\n同时，可能你的困惑是来自<a href="https://github.com/picidaejs/picidaejs/issues">Picidae</a></p>\n<p>😊 感谢!</p>\n<p>—— 墨鱼</p>\n',extra:{}}}});
+//# sourceMappingURL=help_zh.js.map

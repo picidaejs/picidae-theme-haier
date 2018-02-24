@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Server Side Render - Haier </title>
+  <link rel="stylesheet" href="/picidae-theme-haier/style.css">
+  <style type="text/css"> footer .copyright {
+  color: rgba(255, 255, 255, .4)
+}
+footer.nav-footer {
+  background-color: #808080
+}
+.showcaseSection .prose h1,
+.productShowcaseSection h2,
+nav.toc .toggleNav ul li a.navItemActive,
+.container .wrapper h3,
+.container .wrapper h2,
+.homeContainer,
+h1, h2, h3, h4,
+a,
+.container .wrapper h4,
+nav.toc .toggleNav ul li a:hover, nav.toc .toggleNav ul li a:focus {
+  color: #218080
+}
+body {
+  color: #393939
+}
+blockquote {
+  border-left-color: #98e4e4;
+  background-color: #bceeee;
+}
+code {
+  box-shadow: 2px 0 #c0efef, -2px 0 #c0efef;
+  background-color: #c0efef
+}
+.fixedHeaderContainer,
+.button:hover,
+nav.toc .toggleNav .navGroup.navGroupActive h3,
+.navigationSlider .slidingNav ul li > a:focus,
+.navigationSlider .slidingNav ul li > a:hover,
+.navigationSlider .slidingNav ul li > a,
+.mainContainer .wrapper .post .docPagination,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--category-header,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight,
+ul#languages-dropdown-items {
+  background-color: #218080
+}
+.navigationSlider .slidingNav ul {
+  background-color: #218080
+}
+.highlightBackground {
+  background-color: #218080
+}
+.button {
+  color: #218080;
+  border-color: #218080;
+}
+pre code {
+  border-left-color: #218080;
+}
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--title .algolia-docsearch-suggestion--highlight,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--subcategory-column .algolia-docsearch-suggestion--highlight,
+.darkBackground a,
+.darkBackground code {
+  color: #2ba9a9
+}
+@media only screen and (max-width: 735px) {
+  ul#languages-dropdown-items,
+  .reactNavSearchWrapper input#doc-search-input:focus, .reactNavSearchWrapper input#doc-search-input:active {
+    background-color: #218080
+  }
+}
+
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #dd2f3d;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #dd2f3d, 0 0 5px #dd2f3d;
+  opacity: 1.0;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+          transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 15px;
+  right: 15px;
+}
+
+#nprogress .spinner-icon {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+
+  border: solid 2px transparent;
+  border-top-color: #dd2f3d;
+  border-left-color: #dd2f3d;
+  border-radius: 50%;
+
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+          animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0%   { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes nprogress-spinner {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} </style>
+</head>
+<body>
+<div id="root">
+  <div class="" data-reactroot="" data-reactid="1" data-react-checksum="1228573221"><!-- react-empty: 2 --><div class="fixedHeaderContainer" data-reactid="3"><div class="headerWrapper wrapper" data-reactid="4"><header data-reactid="5"><a href="/picidae-theme-haier/" data-reactid="6"><h2 class="headerTitle" data-reactid="7">Haier</h2></a><div class="navigationWrapper navigationSlider" data-reactid="8"><nav class="slidingNav" data-reactid="9"><ul class="nav-site nav-site-internal" data-reactid="10"><li data-reactid="11"><a href="/picidae-theme-haier/guides/installation" data-reactid="12">Get Started</a></li><li data-reactid="13"><a href="/picidae-theme-haier/help" data-reactid="14">Help</a></li><li data-reactid="15"><a href="/picidae-theme-haier/example" data-reactid="16">Example</a></li><span data-reactid="17"><li data-reactid="18"><a href="javascript:;" class="language-toggle" data-reactid="19"><img class="languages-icon" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ibGFuZ3VhZ2Uge3tpbmNsdWRlLmNsYXNzfX0iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDIwIDIwIj4KICA8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTkuNzUzIDEwLjkwOWMtLjYyNC0xLjcwNy0yLjM2Ni0yLjcyNi00LjY2MS0yLjcyNi0uMDkgMC0uMTc2LjAwMi0uMjYyLjAwNmwtLjAxNi0yLjA2MyAzLjUyNS0uNjA3Yy4xMTUtLjAxOS4xMzMtLjExOS4xMDktLjIzMS0uMDIzLS4xMTEtLjE2Ny0uODgzLS4xODgtLjk3Ni0uMDI3LS4xMzEtLjEwMi0uMTI3LS4yMDctLjEwOS0uMTA0LjAxOC0zLjI1LjQ2MS0zLjI1LjQ2MWwtLjAxMy0yLjA3OGMtLjAwMS0uMTI1LS4wNjktLjE1OC0uMTk0LS4xNTZsLTEuMDI1LjAxNmMtLjEwNS4wMDItLjE2NC4wNDktLjE2Mi4xNDhsLjAzMyAyLjMwN3MtMy4wNjEuNTI3LTMuMTQ0LjU0M2MtLjA4NC4wMTQtLjE3LjA1My0uMTUxLjE0My4wMTkuMDkuMTkgMS4wOTQuMjA4IDEuMTcyLjAxOC4wOC4wNzIuMTI5LjE4OC4xMDdsMi45MjQtLjUwNC4wMzUgMi4wMThjLTEuMDc3LjI4MS0xLjgwMS44MjQtMi4yNTYgMS4zMDMtLjc2OC44MDctMS4yMDcgMS44ODctMS4yMDcgMi45NjMgMCAxLjU4Ni45NzEgMi41MjkgMi4zMjggMi42OTUgMy4xNjIuMzg3IDUuMTE5LTMuMDYgNS43NjktNC43MTUgMS4wOTcgMS41MDYuMjU2IDQuMzU0LTIuMDk0IDUuOTgtLjA0My4wMjktLjA5OC4xMjktLjAzMy4yMDdsLjYxOS43NTZjLjA4LjA5Ni4yMDYuMDU5LjI1Ni4wMjMgMi41MS0xLjczIDMuNjYxLTQuNTE1IDIuODY5LTYuNjgzem0tNy4zODYgMy4xODhjLS45NjYtLjEyMS0uOTQ0LS45MTQtLjk0NC0xLjQ1MyAwLS43NzMuMzI3LTEuNTguODc2LTIuMTU2YTMuMjEgMy4yMSAwIDAgMSAxLjIyOS0uNzk5bC4wODIgNC4yNzdhMi43NzMgMi43NzMgMCAwIDEtMS4yNDMuMTMxem0yLjQyNy0uNTUzbC4wNDYtNC4xMDljLjA4NC0uMDA0LjE2Ni0uMDEuMjUyLS4wMS43NzMgMCAxLjQ5NC4xNDUgMS44ODUuMzYxLjM5MS4yMTctMS4wMjMgMi43MTMtMi4xODMgMy43NTh6bS04Ljk1LTcuNjY4YS4xOTYuMTk2IDAgMCAwLS4xOTYtLjE0NWgtMS45NWEuMTk0LjE5NCAwIDAgMC0uMTk0LjE0NEwuMDA4IDE2LjkxNmMtLjAxNy4wNTEtLjAxMS4wNzYuMDYyLjA3NmgxLjczM2MuMDc1IDAgLjA5OS0uMDIzLjExNC0uMDcybDEuMDA4LTMuMzE4aDMuNDk2bDEuMDA4IDMuMzE4Yy4wMTYuMDQ5LjAzOS4wNzIuMTEzLjA3MmgxLjczNGMuMDcyIDAgLjA3OC0uMDI1LjA2Mi0uMDc2LS4wMTQtLjA1LTMuMDgzLTkuNzQxLTMuNDk0LTExLjA0em0tMi42MTggNi4zMThsMS40NDctNS4yNSAxLjQ0NyA1LjI1SDMuMjI2eiIvPgo8L3N2Zz4K" data-reactid="20"/><!-- react-text: 21 -->English<!-- /react-text --></a></li></span><li class="navSearchWrapper reactNavSearchWrapper" data-reactid="22"><input type="text" id="doc-search-input" placeholder="Search..." data-reactid="23"/></li><li data-reactid="24"><a href="https://github.com/picidaejs/picidae-theme-haier" target="_self" data-reactid="25">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher" data-reactid="26"><div class="docMainWrapper wrapper" data-reactid="27"><!-- react-empty: 28 --><div class="container docsNavContainer" data-reactid="29"><nav class="toc" data-reactid="30"><div class="toggleNav" data-reactid="31"><section class="navWrapper wrapper" data-reactid="32"><div class="navBreadcrumb wrapper" data-reactid="33"><div class="navToggle" data-reactid="34"><i data-reactid="35"></i></div><h2 data-reactid="36"><i data-reactid="37">&gt;</i><span data-reactid="38">Get Stated</span></h2></div><div class="navGroups" data-reactid="39"><div class="navGroupActive navGroup" data-reactid="40"><h3 data-reactid="41">Get Stated</h3><ul data-reactid="42"><li class="navListItem" data-reactid="43"><a class="" href="/picidae-theme-haier/guides/installation" data-reactid="44">环境安装</a></li><li class="navListItem" data-reactid="45"><a class="" href="/picidae-theme-haier/guides/getting-started" data-reactid="46">开始写文档</a></li><li class="navListItem" data-reactid="47"><a class="" href="/picidae-theme-haier/guides/configuration" data-reactid="48">Explanation of Configuration</a></li><li class="navListItem navItemActive" data-reactid="49"><a class="navItemActive" href="/picidae-theme-haier/guides/ssr" data-reactid="50">Server Side Render</a></li></ul></div><div class="navGroupActive navGroup" data-reactid="51"><h3 data-reactid="52">Example Documents</h3><ul data-reactid="53"><li class="navListItem" data-reactid="54"><a class="" href="/picidae-theme-haier/docs/doc-a" data-reactid="55">document example a</a></li><li class="navListItem" data-reactid="56"><a class="" href="/picidae-theme-haier/docs/doc-b" data-reactid="57">document example b</a></li></ul></div></div></section></div></nav></div><div class="container mainContainer" data-reactid="58"><div class="wrapper" data-reactid="59"><div class="post" data-reactid="60"><header class="postHeader" data-reactid="61"><a href="https://github.com/picidaejs/picidae-theme-haier/blob/master/test/guides/ssr.md" class="edit-page-link button" target="_blank" data-reactid="62">Edit</a><h1 data-reactid="63">Server Side Render</h1></header><article data-reactid="64"><h5 data-reactid="65"><a class="anchor" aria-hidden="true" name="toc" data-reactid="66"></a><a href="#toc" aria-hidden="true" class="hash-link" data-reactid="67"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16" data-reactid="68"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" data-reactid="69"></path></svg></a><toc data-reactid="70"></toc></h5><!-- react-text: 71 -->
+<!-- /react-text --><hr data-reactid="72"/><!-- react-text: 73 -->
+<!-- /react-text --><p data-reactid="74"><!-- react-text: 75 -->Haier supports picidae ssr and provides <!-- /react-text --><code data-reactid="76">title</code><!-- react-text: 77 --> and <!-- /react-text --><code data-reactid="78">css</code><!-- react-text: 79 -->.
+We recommend the template html as follows.<!-- /react-text --></p><!-- react-text: 80 -->
+<!-- /react-text --><pre data-reactid="81"><code class="hljs language-text" data-query="{}" data-lang="text" data-reactid="82"><span class="xml" data-reactid="83"><span class="hljs-meta" data-reactid="84">&lt;!DOCTYPE html&gt;</span><!-- react-text: 85 -->
+<!-- /react-text --><span class="hljs-tag" data-reactid="86"><!-- react-text: 87 -->&lt;<!-- /react-text --><span class="hljs-name" data-reactid="88">html</span><!-- react-text: 89 -->&gt;<!-- /react-text --></span><!-- react-text: 90 -->
+<!-- /react-text --><span class="hljs-tag" data-reactid="91"><!-- react-text: 92 -->&lt;<!-- /react-text --><span class="hljs-name" data-reactid="93">head</span><!-- react-text: 94 -->&gt;<!-- /react-text --></span><!-- react-text: 95 -->
+  <!-- /react-text --><span class="hljs-tag" data-reactid="96"><!-- react-text: 97 -->&lt;<!-- /react-text --><span class="hljs-name" data-reactid="98">meta</span><!-- react-text: 99 --> <!-- /react-text --><span class="hljs-attr" data-reactid="100">charset</span><!-- react-text: 101 -->=<!-- /react-text --><span class="hljs-string" data-reactid="102">&quot;utf-8&quot;</span><!-- react-text: 103 -->&gt;<!-- /react-text --></span><!-- react-text: 104 -->
+  <!-- /react-text --><span class="hljs-tag" data-reactid="105"><!-- react-text: 106 -->&lt;<!-- /react-text --><span class="hljs-name" data-reactid="107">meta</span><!-- react-text: 108 --> <!-- /react-text --><span class="hljs-attr" data-reactid="109">http-equiv</span><!-- react-text: 110 -->=<!-- /react-text --><span class="hljs-string" data-reactid="111">&quot;X-UA-Compatible&quot;</span><!-- react-text: 112 --> <!-- /react-text --><span class="hljs-attr" data-reactid="113">content</span><!-- react-text: 114 -->=<!-- /react-text --><span class="hljs-string" data-reactid="115">&quot;IE=edge&quot;</span><!-- react-text: 116 -->&gt;<!-- /react-text --></span><!-- react-text: 117 -->
+  <!-- /react-text --><span class="hljs-tag" data-reactid="118"><!-- react-text: 119 -->&lt;<!-- /react-text --><span class="hljs-name" data-reactid="120">meta</span><!-- react-text: 121 --> <!-- /react-text --><span class="hljs-attr" data-reactid="122">name</span><!-- react-text: 123 -->=<!-- /react-text --><span class="hljs-string" data-reactid="124">&quot;viewport&quot;</span><!-- react-text: 125 --> <!-- /react-text --><span class="hljs-attr" data-reactid="126">content</span><!-- react-text: 127 -->=<!-- /react-text --><span class="hljs-string" data-reactid="128">&quot;width=device-width, initial-scale=1.0&quot;</span><!-- react-text: 129 -->&gt;<!-- /react-text --></span><!-- react-text: 130 -->
+  <!-- /react-text --><span class="hljs-comment" data-reactid="131">&lt;!--NOTE--&gt;</span><!-- react-text: 132 -->
+  <!-- /react-text --><span class="hljs-tag" data-reactid="133"><!-- react-text: 134 -->&lt;<!-- /react-text --><span class="hljs-name" data-reactid="135">title</span><!-- react-text: 136 -->&gt;<!-- /react-text --></span><!-- react-text: 137 --> <!-- /react-text --></span><span class="hljs-template-variable" data-reactid="138">{{ themeData.title }}</span><span class="xml" data-reactid="139"><!-- react-text: 140 --> <!-- /react-text --><span class="hljs-tag" data-reactid="141"><!-- react-text: 142 -->&lt;/<!-- /react-text --><span class="hljs-name" data-reactid="143">title</span><!-- react-text: 144 -->&gt;<!-- /react-text --></span><!-- react-text: 145 -->
+  <!-- /react-text --><span class="hljs-tag" data-reactid="146"><!-- react-text: 147 -->&lt;<!-- /react-text --><span class="hljs-name" data-reactid="148">link</span><!-- react-text: 149 --> <!-- /react-text --><span class="hljs-attr" data-reactid="150">rel</span><!-- react-text: 151 -->=<!-- /react-text --><span class="hljs-string" data-reactid="152">&quot;stylesheet&quot;</span><!-- react-text: 153 --> <!-- /react-text --><span class="hljs-attr" data-reactid="154">href</span><!-- react-text: 155 -->=<!-- /react-text --><span class="hljs-string" data-reactid="156">&quot;</span></span></span><span class="hljs-template-variable" data-reactid="157">{{ root }}</span><span class="xml" data-reactid="158"><!-- react-text: 159 -->style.css&quot;&gt;
+  <!-- /react-text --><span class="hljs-comment" data-reactid="160">&lt;!--NOTE--&gt;</span><!-- react-text: 161 -->
+  <!-- /react-text --><span class="hljs-tag" data-reactid="162"><!-- react-text: 163 -->&lt;<!-- /react-text --><span class="hljs-name" data-reactid="164">style</span><!-- react-text: 165 --> <!-- /react-text --><span class="hljs-attr" data-reactid="166">type</span><!-- react-text: 167 -->=<!-- /react-text --><span class="hljs-string" data-reactid="168">&quot;text/css&quot;</span><!-- react-text: 169 -->&gt;<!-- /react-text --></span><span class="null" data-reactid="170"></span></span><span class="hljs-template-variable" data-reactid="171">{{ themeData.css | safe }}</span><span class="xml" data-reactid="172"><span class="null" data-reactid="173"></span><span class="hljs-tag" data-reactid="174"><!-- react-text: 175 -->&lt;/<!-- /react-text --><span class="hljs-name" data-reactid="176">style</span><!-- react-text: 177 -->&gt;<!-- /react-text --></span><!-- react-text: 178 -->
+<!-- /react-text --><span class="hljs-tag" data-reactid="179"><!-- react-text: 180 -->&lt;/<!-- /react-text --><span class="hljs-name" data-reactid="181">head</span><!-- react-text: 182 -->&gt;<!-- /react-text --></span><!-- react-text: 183 -->
+<!-- /react-text --><span class="hljs-tag" data-reactid="184"><!-- react-text: 185 -->&lt;<!-- /react-text --><span class="hljs-name" data-reactid="186">body</span><!-- react-text: 187 -->&gt;<!-- /react-text --></span><!-- react-text: 188 -->
+<!-- /react-text --><span class="hljs-tag" data-reactid="189"><!-- react-text: 190 -->&lt;<!-- /react-text --><span class="hljs-name" data-reactid="191">div</span><!-- react-text: 192 --> <!-- /react-text --><span class="hljs-attr" data-reactid="193">id</span><!-- react-text: 194 -->=<!-- /react-text --><span class="hljs-string" data-reactid="195">&quot;root&quot;</span><!-- react-text: 196 -->&gt;<!-- /react-text --></span><!-- react-text: 197 -->
+  <!-- /react-text --></span><span class="hljs-template-variable" data-reactid="198">{{ content | safe }}</span><span class="xml" data-reactid="199"><!-- react-text: 200 -->
+<!-- /react-text --><span class="hljs-tag" data-reactid="201"><!-- react-text: 202 -->&lt;/<!-- /react-text --><span class="hljs-name" data-reactid="203">div</span><!-- react-text: 204 -->&gt;<!-- /react-text --></span><!-- react-text: 205 -->
+<!-- /react-text --><span class="hljs-tag" data-reactid="206"><!-- react-text: 207 -->&lt;<!-- /react-text --><span class="hljs-name" data-reactid="208">script</span><!-- react-text: 209 --> <!-- /react-text --><span class="hljs-attr" data-reactid="210">src</span><!-- react-text: 211 -->=<!-- /react-text --><span class="hljs-string" data-reactid="212">&quot;</span></span></span><span class="hljs-template-variable" data-reactid="213">{{ root }}</span><span class="xml" data-reactid="214"><!-- react-text: 215 -->PICIDAE_COMMON.js&quot;&gt;<!-- /react-text --><span class="null" data-reactid="216"></span><span class="hljs-tag" data-reactid="217"><!-- react-text: 218 -->&lt;/<!-- /react-text --><span class="hljs-name" data-reactid="219">script</span><!-- react-text: 220 -->&gt;<!-- /react-text --></span><!-- react-text: 221 -->
+<!-- /react-text --><span class="hljs-tag" data-reactid="222"><!-- react-text: 223 -->&lt;<!-- /react-text --><span class="hljs-name" data-reactid="224">script</span><!-- react-text: 225 --> <!-- /react-text --><span class="hljs-attr" data-reactid="226">src</span><!-- react-text: 227 -->=<!-- /react-text --><span class="hljs-string" data-reactid="228">&quot;</span></span></span><span class="hljs-template-variable" data-reactid="229">{{ root }}</span><span class="xml" data-reactid="230"><!-- react-text: 231 -->PICIDAE_ENTRY.js&quot;&gt;<!-- /react-text --><span class="null" data-reactid="232"></span><span class="hljs-tag" data-reactid="233"><!-- react-text: 234 -->&lt;/<!-- /react-text --><span class="hljs-name" data-reactid="235">script</span><!-- react-text: 236 -->&gt;<!-- /react-text --></span><!-- react-text: 237 -->
+<!-- /react-text --><span class="hljs-tag" data-reactid="238"><!-- react-text: 239 -->&lt;/<!-- /react-text --><span class="hljs-name" data-reactid="240">body</span><!-- react-text: 241 -->&gt;<!-- /react-text --></span><!-- react-text: 242 -->
+<!-- /react-text --><span class="hljs-tag" data-reactid="243"><!-- react-text: 244 -->&lt;/<!-- /react-text --><span class="hljs-name" data-reactid="245">html</span><!-- react-text: 246 -->&gt;<!-- /react-text --></span></span></code></pre><!-- react-text: 247 -->
+<!-- /react-text --></article></div><div class="docs-prevnext" data-reactid="248"><a class="docs-prev button" href="/picidae-theme-haier/guides/configuration" data-reactid="249">← Explanation of Configuration</a><a class="docs-next button" href="/picidae-theme-haier/docs/doc-a" data-reactid="250">document example a →</a></div></div></div></div></div><footer class="nav-footer" data-reactid="251"><a href="https://github.com/picidaejs/picidaejs" target="_blank" class="fbOpenSource" data-reactid="252"><img src="https://github.com/picidaejs/picidaejs/raw/master/logo/picidae-2x.png" data-reactid="253"/></a><section class="copyright" data-reactid="254"><p style="margin-bottom:5px;" data-reactid="255">Copyright © 2018 - Built by Picidae</p><!-- react-text: 256 -->Powered by <!-- /react-text --><a href="https://github.com/picidaejs/picidae-theme-haier" target="_blank" data-reactid="257">🍔 Haier</a><!-- react-text: 258 -->.<!-- /react-text --></section></footer></div>
+</div>
+<script src="/picidae-theme-haier/PICIDAE_COMMON.js"></script>
+<script src="/picidae-theme-haier/PICIDAE_ENTRY.js"></script>
+</body>
+</html>

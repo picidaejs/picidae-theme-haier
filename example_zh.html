@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 例子 - Haier </title>
+  <link rel="stylesheet" href="/picidae-theme-haier/style.css">
+  <style type="text/css"> footer .copyright {
+  color: rgba(255, 255, 255, .4)
+}
+footer.nav-footer {
+  background-color: #808080
+}
+.showcaseSection .prose h1,
+.productShowcaseSection h2,
+nav.toc .toggleNav ul li a.navItemActive,
+.container .wrapper h3,
+.container .wrapper h2,
+.homeContainer,
+h1, h2, h3, h4,
+a,
+.container .wrapper h4,
+nav.toc .toggleNav ul li a:hover, nav.toc .toggleNav ul li a:focus {
+  color: #218080
+}
+body {
+  color: #393939
+}
+blockquote {
+  border-left-color: #98e4e4;
+  background-color: #bceeee;
+}
+code {
+  box-shadow: 2px 0 #c0efef, -2px 0 #c0efef;
+  background-color: #c0efef
+}
+.fixedHeaderContainer,
+.button:hover,
+nav.toc .toggleNav .navGroup.navGroupActive h3,
+.navigationSlider .slidingNav ul li > a:focus,
+.navigationSlider .slidingNav ul li > a:hover,
+.navigationSlider .slidingNav ul li > a,
+.mainContainer .wrapper .post .docPagination,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--category-header,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight,
+ul#languages-dropdown-items {
+  background-color: #218080
+}
+.navigationSlider .slidingNav ul {
+  background-color: #218080
+}
+.highlightBackground {
+  background-color: #218080
+}
+.button {
+  color: #218080;
+  border-color: #218080;
+}
+pre code {
+  border-left-color: #218080;
+}
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--title .algolia-docsearch-suggestion--highlight,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--subcategory-column .algolia-docsearch-suggestion--highlight,
+.darkBackground a,
+.darkBackground code {
+  color: #2ba9a9
+}
+@media only screen and (max-width: 735px) {
+  ul#languages-dropdown-items,
+  .reactNavSearchWrapper input#doc-search-input:focus, .reactNavSearchWrapper input#doc-search-input:active {
+    background-color: #218080
+  }
+}
+
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #dd2f3d;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #dd2f3d, 0 0 5px #dd2f3d;
+  opacity: 1.0;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+          transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 15px;
+  right: 15px;
+}
+
+#nprogress .spinner-icon {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+
+  border: solid 2px transparent;
+  border-top-color: #dd2f3d;
+  border-left-color: #dd2f3d;
+  border-radius: 50%;
+
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+          animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0%   { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes nprogress-spinner {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} </style>
+</head>
+<body>
+<div id="root">
+  <div class="" data-reactroot="" data-reactid="1" data-react-checksum="-1755903959"><!-- react-empty: 2 --><div class="fixedHeaderContainer" data-reactid="3"><div class="headerWrapper wrapper" data-reactid="4"><header data-reactid="5"><a href="/picidae-theme-haier/index_zh" data-reactid="6"><h2 class="headerTitle" data-reactid="7">Haier</h2></a><div class="navigationWrapper navigationSlider" data-reactid="8"><nav class="slidingNav" data-reactid="9"><ul class="nav-site nav-site-internal" data-reactid="10"><li data-reactid="11"><a href="/picidae-theme-haier/guides/installation_zh" data-reactid="12">开始使用</a></li><li data-reactid="13"><a href="/picidae-theme-haier/help_zh" data-reactid="14">帮助</a></li><li data-reactid="15"><a href="/picidae-theme-haier/example_zh" data-reactid="16">栗子</a></li><span data-reactid="17"><li data-reactid="18"><a href="javascript:;" class="language-toggle" data-reactid="19"><img class="languages-icon" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ibGFuZ3VhZ2Uge3tpbmNsdWRlLmNsYXNzfX0iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDIwIDIwIj4KICA8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTkuNzUzIDEwLjkwOWMtLjYyNC0xLjcwNy0yLjM2Ni0yLjcyNi00LjY2MS0yLjcyNi0uMDkgMC0uMTc2LjAwMi0uMjYyLjAwNmwtLjAxNi0yLjA2MyAzLjUyNS0uNjA3Yy4xMTUtLjAxOS4xMzMtLjExOS4xMDktLjIzMS0uMDIzLS4xMTEtLjE2Ny0uODgzLS4xODgtLjk3Ni0uMDI3LS4xMzEtLjEwMi0uMTI3LS4yMDctLjEwOS0uMTA0LjAxOC0zLjI1LjQ2MS0zLjI1LjQ2MWwtLjAxMy0yLjA3OGMtLjAwMS0uMTI1LS4wNjktLjE1OC0uMTk0LS4xNTZsLTEuMDI1LjAxNmMtLjEwNS4wMDItLjE2NC4wNDktLjE2Mi4xNDhsLjAzMyAyLjMwN3MtMy4wNjEuNTI3LTMuMTQ0LjU0M2MtLjA4NC4wMTQtLjE3LjA1My0uMTUxLjE0My4wMTkuMDkuMTkgMS4wOTQuMjA4IDEuMTcyLjAxOC4wOC4wNzIuMTI5LjE4OC4xMDdsMi45MjQtLjUwNC4wMzUgMi4wMThjLTEuMDc3LjI4MS0xLjgwMS44MjQtMi4yNTYgMS4zMDMtLjc2OC44MDctMS4yMDcgMS44ODctMS4yMDcgMi45NjMgMCAxLjU4Ni45NzEgMi41MjkgMi4zMjggMi42OTUgMy4xNjIuMzg3IDUuMTE5LTMuMDYgNS43NjktNC43MTUgMS4wOTcgMS41MDYuMjU2IDQuMzU0LTIuMDk0IDUuOTgtLjA0My4wMjktLjA5OC4xMjktLjAzMy4yMDdsLjYxOS43NTZjLjA4LjA5Ni4yMDYuMDU5LjI1Ni4wMjMgMi41MS0xLjczIDMuNjYxLTQuNTE1IDIuODY5LTYuNjgzem0tNy4zODYgMy4xODhjLS45NjYtLjEyMS0uOTQ0LS45MTQtLjk0NC0xLjQ1MyAwLS43NzMuMzI3LTEuNTguODc2LTIuMTU2YTMuMjEgMy4yMSAwIDAgMSAxLjIyOS0uNzk5bC4wODIgNC4yNzdhMi43NzMgMi43NzMgMCAwIDEtMS4yNDMuMTMxem0yLjQyNy0uNTUzbC4wNDYtNC4xMDljLjA4NC0uMDA0LjE2Ni0uMDEuMjUyLS4wMS43NzMgMCAxLjQ5NC4xNDUgMS44ODUuMzYxLjM5MS4yMTctMS4wMjMgMi43MTMtMi4xODMgMy43NTh6bS04Ljk1LTcuNjY4YS4xOTYuMTk2IDAgMCAwLS4xOTYtLjE0NWgtMS45NWEuMTk0LjE5NCAwIDAgMC0uMTk0LjE0NEwuMDA4IDE2LjkxNmMtLjAxNy4wNTEtLjAxMS4wNzYuMDYyLjA3NmgxLjczM2MuMDc1IDAgLjA5OS0uMDIzLjExNC0uMDcybDEuMDA4LTMuMzE4aDMuNDk2bDEuMDA4IDMuMzE4Yy4wMTYuMDQ5LjAzOS4wNzIuMTEzLjA3MmgxLjczNGMuMDcyIDAgLjA3OC0uMDI1LjA2Mi0uMDc2LS4wMTQtLjA1LTMuMDgzLTkuNzQxLTMuNDk0LTExLjA0em0tMi42MTggNi4zMThsMS40NDctNS4yNSAxLjQ0NyA1LjI1SDMuMjI2eiIvPgo8L3N2Zz4K" data-reactid="20"/><!-- react-text: 21 -->中文<!-- /react-text --></a></li></span><li class="navSearchWrapper reactNavSearchWrapper" data-reactid="22"><input type="text" id="doc-search-input" placeholder="搜索..." data-reactid="23"/></li><li data-reactid="24"><a href="https://github.com/picidaejs/picidae-theme-haier" target="_self" data-reactid="25">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher" data-reactid="26"><div class="docMainWrapper wrapper" data-reactid="27"><!-- react-empty: 28 --><div class="container mainContainer documentContainer postContainer" data-reactid="29"><div class="wrapper" data-reactid="30"><div class="post" data-reactid="31"><article data-reactid="32"><p data-reactid="33">撸啦撸啦里哩哩啦啦</p><!-- react-text: 34 -->
+<!-- /react-text --></article></div></div></div></div></div><footer class="nav-footer" data-reactid="35"><a href="https://github.com/picidaejs/picidaejs" target="_blank" class="fbOpenSource" data-reactid="36"><img src="https://github.com/picidaejs/picidaejs/raw/master/logo/picidae-2x.png" data-reactid="37"/></a><section class="copyright" data-reactid="38"><p style="margin-bottom:5px;" data-reactid="39">Copyright © 2018 - Built by Picidae</p><!-- react-text: 40 -->Powered by <!-- /react-text --><a href="https://github.com/picidaejs/picidae-theme-haier" target="_blank" data-reactid="41">🍔 Haier</a><!-- react-text: 42 -->.<!-- /react-text --></section></footer></div>
+</div>
+<script src="/picidae-theme-haier/PICIDAE_COMMON.js"></script>
+<script src="/picidae-theme-haier/PICIDAE_ENTRY.js"></script>
+</body>
+</html>

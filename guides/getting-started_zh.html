@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 开始写文档 - Haier </title>
+  <link rel="stylesheet" href="/picidae-theme-haier/style.css">
+  <style type="text/css"> footer .copyright {
+  color: rgba(255, 255, 255, .4)
+}
+footer.nav-footer {
+  background-color: #808080
+}
+.showcaseSection .prose h1,
+.productShowcaseSection h2,
+nav.toc .toggleNav ul li a.navItemActive,
+.container .wrapper h3,
+.container .wrapper h2,
+.homeContainer,
+h1, h2, h3, h4,
+a,
+.container .wrapper h4,
+nav.toc .toggleNav ul li a:hover, nav.toc .toggleNav ul li a:focus {
+  color: #218080
+}
+body {
+  color: #393939
+}
+blockquote {
+  border-left-color: #98e4e4;
+  background-color: #bceeee;
+}
+code {
+  box-shadow: 2px 0 #c0efef, -2px 0 #c0efef;
+  background-color: #c0efef
+}
+.fixedHeaderContainer,
+.button:hover,
+nav.toc .toggleNav .navGroup.navGroupActive h3,
+.navigationSlider .slidingNav ul li > a:focus,
+.navigationSlider .slidingNav ul li > a:hover,
+.navigationSlider .slidingNav ul li > a,
+.mainContainer .wrapper .post .docPagination,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--category-header,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight,
+ul#languages-dropdown-items {
+  background-color: #218080
+}
+.navigationSlider .slidingNav ul {
+  background-color: #218080
+}
+.highlightBackground {
+  background-color: #218080
+}
+.button {
+  color: #218080;
+  border-color: #218080;
+}
+pre code {
+  border-left-color: #218080;
+}
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--title .algolia-docsearch-suggestion--highlight,
+.navSearchWrapper .ds-dropdown-menu .algolia-docsearch-suggestion--subcategory-column .algolia-docsearch-suggestion--highlight,
+.darkBackground a,
+.darkBackground code {
+  color: #2ba9a9
+}
+@media only screen and (max-width: 735px) {
+  ul#languages-dropdown-items,
+  .reactNavSearchWrapper input#doc-search-input:focus, .reactNavSearchWrapper input#doc-search-input:active {
+    background-color: #218080
+  }
+}
+
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #dd2f3d;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #dd2f3d, 0 0 5px #dd2f3d;
+  opacity: 1.0;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+          transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 15px;
+  right: 15px;
+}
+
+#nprogress .spinner-icon {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+
+  border: solid 2px transparent;
+  border-top-color: #dd2f3d;
+  border-left-color: #dd2f3d;
+  border-radius: 50%;
+
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+          animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0%   { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes nprogress-spinner {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} </style>
+</head>
+<body>
+<div id="root">
+  <div class="" data-reactroot="" data-reactid="1" data-react-checksum="-2040869604"><!-- react-empty: 2 --><div class="fixedHeaderContainer" data-reactid="3"><div class="headerWrapper wrapper" data-reactid="4"><header data-reactid="5"><a href="/picidae-theme-haier/index_zh" data-reactid="6"><h2 class="headerTitle" data-reactid="7">Haier</h2></a><div class="navigationWrapper navigationSlider" data-reactid="8"><nav class="slidingNav" data-reactid="9"><ul class="nav-site nav-site-internal" data-reactid="10"><li data-reactid="11"><a href="/picidae-theme-haier/guides/installation_zh" data-reactid="12">开始使用</a></li><li data-reactid="13"><a href="/picidae-theme-haier/help_zh" data-reactid="14">帮助</a></li><li data-reactid="15"><a href="/picidae-theme-haier/example_zh" data-reactid="16">栗子</a></li><span data-reactid="17"><li data-reactid="18"><a href="javascript:;" class="language-toggle" data-reactid="19"><img class="languages-icon" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ibGFuZ3VhZ2Uge3tpbmNsdWRlLmNsYXNzfX0iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDIwIDIwIj4KICA8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTkuNzUzIDEwLjkwOWMtLjYyNC0xLjcwNy0yLjM2Ni0yLjcyNi00LjY2MS0yLjcyNi0uMDkgMC0uMTc2LjAwMi0uMjYyLjAwNmwtLjAxNi0yLjA2MyAzLjUyNS0uNjA3Yy4xMTUtLjAxOS4xMzMtLjExOS4xMDktLjIzMS0uMDIzLS4xMTEtLjE2Ny0uODgzLS4xODgtLjk3Ni0uMDI3LS4xMzEtLjEwMi0uMTI3LS4yMDctLjEwOS0uMTA0LjAxOC0zLjI1LjQ2MS0zLjI1LjQ2MWwtLjAxMy0yLjA3OGMtLjAwMS0uMTI1LS4wNjktLjE1OC0uMTk0LS4xNTZsLTEuMDI1LjAxNmMtLjEwNS4wMDItLjE2NC4wNDktLjE2Mi4xNDhsLjAzMyAyLjMwN3MtMy4wNjEuNTI3LTMuMTQ0LjU0M2MtLjA4NC4wMTQtLjE3LjA1My0uMTUxLjE0My4wMTkuMDkuMTkgMS4wOTQuMjA4IDEuMTcyLjAxOC4wOC4wNzIuMTI5LjE4OC4xMDdsMi45MjQtLjUwNC4wMzUgMi4wMThjLTEuMDc3LjI4MS0xLjgwMS44MjQtMi4yNTYgMS4zMDMtLjc2OC44MDctMS4yMDcgMS44ODctMS4yMDcgMi45NjMgMCAxLjU4Ni45NzEgMi41MjkgMi4zMjggMi42OTUgMy4xNjIuMzg3IDUuMTE5LTMuMDYgNS43NjktNC43MTUgMS4wOTcgMS41MDYuMjU2IDQuMzU0LTIuMDk0IDUuOTgtLjA0My4wMjktLjA5OC4xMjktLjAzMy4yMDdsLjYxOS43NTZjLjA4LjA5Ni4yMDYuMDU5LjI1Ni4wMjMgMi41MS0xLjczIDMuNjYxLTQuNTE1IDIuODY5LTYuNjgzem0tNy4zODYgMy4xODhjLS45NjYtLjEyMS0uOTQ0LS45MTQtLjk0NC0xLjQ1MyAwLS43NzMuMzI3LTEuNTguODc2LTIuMTU2YTMuMjEgMy4yMSAwIDAgMSAxLjIyOS0uNzk5bC4wODIgNC4yNzdhMi43NzMgMi43NzMgMCAwIDEtMS4yNDMuMTMxem0yLjQyNy0uNTUzbC4wNDYtNC4xMDljLjA4NC0uMDA0LjE2Ni0uMDEuMjUyLS4wMS43NzMgMCAxLjQ5NC4xNDUgMS44ODUuMzYxLjM5MS4yMTctMS4wMjMgMi43MTMtMi4xODMgMy43NTh6bS04Ljk1LTcuNjY4YS4xOTYuMTk2IDAgMCAwLS4xOTYtLjE0NWgtMS45NWEuMTk0LjE5NCAwIDAgMC0uMTk0LjE0NEwuMDA4IDE2LjkxNmMtLjAxNy4wNTEtLjAxMS4wNzYuMDYyLjA3NmgxLjczM2MuMDc1IDAgLjA5OS0uMDIzLjExNC0uMDcybDEuMDA4LTMuMzE4aDMuNDk2bDEuMDA4IDMuMzE4Yy4wMTYuMDQ5LjAzOS4wNzIuMTEzLjA3MmgxLjczNGMuMDcyIDAgLjA3OC0uMDI1LjA2Mi0uMDc2LS4wMTQtLjA1LTMuMDgzLTkuNzQxLTMuNDk0LTExLjA0em0tMi42MTggNi4zMThsMS40NDctNS4yNSAxLjQ0NyA1LjI1SDMuMjI2eiIvPgo8L3N2Zz4K" data-reactid="20"/><!-- react-text: 21 -->中文<!-- /react-text --></a></li></span><li class="navSearchWrapper reactNavSearchWrapper" data-reactid="22"><input type="text" id="doc-search-input" placeholder="搜索..." data-reactid="23"/></li><li data-reactid="24"><a href="https://github.com/picidaejs/picidae-theme-haier" target="_self" data-reactid="25">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher" data-reactid="26"><div class="docMainWrapper wrapper" data-reactid="27"><!-- react-empty: 28 --><div class="container docsNavContainer" data-reactid="29"><nav class="toc" data-reactid="30"><div class="toggleNav" data-reactid="31"><section class="navWrapper wrapper" data-reactid="32"><div class="navBreadcrumb wrapper" data-reactid="33"><div class="navToggle" data-reactid="34"><i data-reactid="35"></i></div><h2 data-reactid="36"><i data-reactid="37">&gt;</i><span data-reactid="38">Get Stated</span></h2></div><div class="navGroups" data-reactid="39"><div class="navGroupActive navGroup" data-reactid="40"><h3 data-reactid="41">开始使用</h3><ul data-reactid="42"><li class="navListItem" data-reactid="43"><a class="" href="/picidae-theme-haier/guides/installation_zh" data-reactid="44">环境安装</a></li><li class="navListItem navItemActive" data-reactid="45"><a class="navItemActive" href="/picidae-theme-haier/guides/getting-started_zh" data-reactid="46">开始写文档</a></li><li class="navListItem" data-reactid="47"><a class="" href="/picidae-theme-haier/guides/configuration_zh" data-reactid="48">配置说明</a></li><li class="navListItem" data-reactid="49"><a class="" href="/picidae-theme-haier/guides/ssr_zh" data-reactid="50">服务端渲染</a></li></ul></div><div class="navGroupActive navGroup" data-reactid="51"><h3 data-reactid="52">文档示例</h3><ul data-reactid="53"><li class="navListItem" data-reactid="54"><a class="" href="/picidae-theme-haier/docs/doc-a_zh" data-reactid="55">文档例子 a</a></li><li class="navListItem" data-reactid="56"><a class="" href="/picidae-theme-haier/docs/doc-b_zh" data-reactid="57">文档例子 b</a></li></ul></div></div></section></div></nav></div><div class="container mainContainer" data-reactid="58"><div class="wrapper" data-reactid="59"><div class="post" data-reactid="60"><header class="postHeader" data-reactid="61"><a href="https://github.com/picidaejs/picidae-theme-haier/blob/master/test/guides/getting-started_zh.md" class="edit-page-link button" target="_blank" data-reactid="62">编辑</a><h1 data-reactid="63">开始写文档</h1></header><article data-reactid="64"><div class="picidae-toc" data-reactid="65"><!-- react-text: 66 -->
+<!-- /react-text --><ul data-reactid="67"><!-- react-text: 68 -->
+<!-- /react-text --><li data-reactid="69"><!-- react-text: 70 -->
+<!-- /react-text --><a href="#yaml-front" data-reactid="71">Yaml Front</a><!-- react-text: 72 -->
+<!-- /react-text --></li><!-- react-text: 73 -->
+<!-- /react-text --><li data-reactid="74"><!-- react-text: 75 -->
+<!-- /react-text --><a href="#%E6%96%87%E4%BB%B6%E8%B7%AF%E7%94%B1%E5%AF%B9%E5%BA%94" data-reactid="76">文件路由对应</a><!-- react-text: 77 -->
+<!-- /react-text --></li><!-- react-text: 78 -->
+<!-- /react-text --></ul><!-- react-text: 79 -->
+<!-- /react-text --></div><!-- react-text: 80 -->
+<!-- /react-text --><hr data-reactid="81"/><!-- react-text: 82 -->
+<!-- /react-text --><p data-reactid="83"><!-- react-text: 84 -->由于<!-- /react-text --><a href="/picidae-theme-haier/guides/installation_zh" data-reactid="85">上一节</a><!-- react-text: 86 -->中 picidae 配置文件中将 <!-- /react-text --><code data-reactid="87">docRoot</code><!-- react-text: 88 --> 设置为 ./docs，即为 <!-- /react-text --><code data-reactid="89">my-docs/docs</code><!-- react-text: 90 --> 目录，那么我们就开始在目录下书写我们的文档吧！
+首先建立如下结构的文档集合：<!-- /react-text --></p><!-- react-text: 91 -->
+<!-- /react-text --><pre data-reactid="92"><code class="hljs language-text" data-query="{}" data-lang="text" data-reactid="93"><!-- react-text: 94 -->docs/
+├── api/
+│   ├── __information__<!-- /react-text --><span class="hljs-selector-class" data-reactid="95">.md</span><!-- react-text: 96 -->
+│   ├── hello-haier_zh<!-- /react-text --><span class="hljs-selector-class" data-reactid="97">.md</span><!-- react-text: 98 -->
+│   └── hello-haier<!-- /react-text --><span class="hljs-selector-class" data-reactid="99">.md</span><!-- react-text: 100 -->
+├── help_zh<!-- /react-text --><span class="hljs-selector-class" data-reactid="101">.md</span><!-- react-text: 102 -->
+├── help<!-- /react-text --><span class="hljs-selector-class" data-reactid="103">.md</span><!-- react-text: 104 -->
+├── index_zh<!-- /react-text --><span class="hljs-selector-class" data-reactid="105">.md</span><!-- react-text: 106 -->
+└── index.md<!-- /react-text --></code></pre><!-- react-text: 107 -->
+<!-- /react-text --><p data-reactid="108">那么各文件的对应关系是如何的呢？介绍之前我们现需要了解一下 yaml-front 的文本格式，
+之前使用过 Hexo 写博客的同学肯定就比较熟悉了，那么可以直接跳过这里了。</p><!-- react-text: 109 -->
+<!-- /react-text --><h2 data-reactid="110"><a class="anchor" aria-hidden="true" name="yaml-front" data-reactid="111"></a><a href="#yaml-front" aria-hidden="true" class="hash-link" data-reactid="112"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16" data-reactid="113"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" data-reactid="114"></path></svg></a><!-- react-text: 115 -->Yaml Front<!-- /react-text --></h2><!-- react-text: 116 -->
+<!-- /react-text --><p data-reactid="117"><!-- react-text: 118 -->yarm front 意思就是 yaml 前置，那么 yaml 是什么呢？<!-- /react-text --><br data-reactid="119"/><!-- react-text: 120 -->
+yaml 是一种数据结构的文件格式，如我们需要表达一个 title 为 <!-- /react-text --><code data-reactid="121">hello</code><!-- react-text: 122 --> 的数据结构，
+在 JSON 中是<!-- /react-text --></p><!-- react-text: 123 -->
+<!-- /react-text --><pre data-reactid="124"><code class="hljs language-json" data-query="{}" data-lang="json" data-reactid="125"><!-- react-text: 126 -->{ <!-- /react-text --><span class="hljs-attr" data-reactid="127">&quot;title&quot;</span><!-- react-text: 128 -->: <!-- /react-text --><span class="hljs-string" data-reactid="129">&quot;hello&quot;</span><!-- react-text: 130 --> }<!-- /react-text --></code></pre><!-- react-text: 131 -->
+<!-- /react-text --><p data-reactid="132">而用 yaml 表示则为</p><!-- react-text: 133 -->
+<!-- /react-text --><pre data-reactid="134"><code class="hljs language-yaml" data-query="{}" data-lang="yaml" data-reactid="135"><span class="hljs-attr" data-reactid="136">title:</span><!-- react-text: 137 --> <!-- /react-text --><span class="hljs-string" data-reactid="138">hello</span></code></pre><!-- react-text: 139 -->
+<!-- /react-text --><p data-reactid="140"><!-- react-text: 141 -->除了上面的简单的数据结构以外，yaml 用来表示嵌套复杂的数据结构也是十分给力的！<!-- /react-text --><br data-reactid="142"/><!-- react-text: 143 -->
+了解 Yaml Front 之后，下面详细介绍各文件的对应关系<!-- /react-text --></p><!-- react-text: 144 -->
+<!-- /react-text --><h2 data-reactid="145"><a class="anchor" aria-hidden="true" name="文件路由对应" data-reactid="146"></a><a href="#%E6%96%87%E4%BB%B6%E8%B7%AF%E7%94%B1%E5%AF%B9%E5%BA%94" aria-hidden="true" class="hash-link" data-reactid="147"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16" data-reactid="148"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z" data-reactid="149"></path></svg></a><!-- react-text: 150 -->文件路由对应<!-- /react-text --></h2><!-- react-text: 151 -->
+<!-- /react-text --><p data-reactid="152">如下表格：</p><!-- react-text: 153 -->
+<!-- /react-text --><table data-reactid="154"><!-- react-text: 155 -->
+<!-- /react-text --><thead data-reactid="156"><!-- react-text: 157 -->
+<!-- /react-text --><tr data-reactid="158"><!-- react-text: 159 -->
+<!-- /react-text --><th data-reactid="160">文件</th><!-- react-text: 161 -->
+<!-- /react-text --><th data-reactid="162">对应路径</th><!-- react-text: 163 -->
+<!-- /react-text --><th data-reactid="164">描述</th><!-- react-text: 165 -->
+<!-- /react-text --></tr><!-- react-text: 166 -->
+<!-- /react-text --></thead><!-- react-text: 167 -->
+<!-- /react-text --><tbody data-reactid="168"><!-- react-text: 169 -->
+<!-- /react-text --><tr data-reactid="170"><!-- react-text: 171 -->
+<!-- /react-text --><td data-reactid="172">index.md</td><!-- react-text: 173 -->
+<!-- /react-text --><td data-reactid="174">/</td><!-- react-text: 175 -->
+<!-- /react-text --><td data-reactid="176">英文首页渲染的 md</td><!-- react-text: 177 -->
+<!-- /react-text --></tr><!-- react-text: 178 -->
+<!-- /react-text --><tr data-reactid="179"><!-- react-text: 180 -->
+<!-- /react-text --><td data-reactid="181">index_zh.md</td><!-- react-text: 182 -->
+<!-- /react-text --><td data-reactid="183">/index_zh</td><!-- react-text: 184 -->
+<!-- /react-text --><td data-reactid="185">中文首页</td><!-- react-text: 186 -->
+<!-- /react-text --></tr><!-- react-text: 187 -->
+<!-- /react-text --><tr data-reactid="188"><!-- react-text: 189 -->
+<!-- /react-text --><td data-reactid="190">help.md</td><!-- react-text: 191 -->
+<!-- /react-text --><td data-reactid="192">/help</td><!-- react-text: 193 -->
+<!-- /react-text --><td data-reactid="194">英文帮助页面，支持的 Yaml Front 有 title（用于 document title）</td><!-- react-text: 195 -->
+<!-- /react-text --></tr><!-- react-text: 196 -->
+<!-- /react-text --><tr data-reactid="197"><!-- react-text: 198 -->
+<!-- /react-text --><td data-reactid="199">help_zh.md</td><!-- react-text: 200 -->
+<!-- /react-text --><td data-reactid="201">/help_zh</td><!-- react-text: 202 -->
+<!-- /react-text --><td data-reactid="203">同上逻辑</td><!-- react-text: 204 -->
+<!-- /react-text --></tr><!-- react-text: 205 -->
+<!-- /react-text --><tr data-reactid="206"><!-- react-text: 207 -->
+<!-- /react-text --><td data-reactid="208">api/hello-haier.md</td><!-- react-text: 209 -->
+<!-- /react-text --><td data-reactid="210">/api/hello-haier</td><!-- react-text: 211 -->
+<!-- /react-text --><td data-reactid="212">英文环境下的 API 文档，支持 title（对应页面标题），order（同级排序序号，从小到大）</td><!-- react-text: 213 -->
+<!-- /react-text --></tr><!-- react-text: 214 -->
+<!-- /react-text --><tr data-reactid="215"><!-- react-text: 216 -->
+<!-- /react-text --><td data-reactid="217">api/hello-haier_zh.md</td><!-- react-text: 218 -->
+<!-- /react-text --><td data-reactid="219">/api/hello-haier_zh</td><!-- react-text: 220 -->
+<!-- /react-text --><td data-reactid="221">同上，中文环境</td><!-- react-text: 222 -->
+<!-- /react-text --></tr><!-- react-text: 223 -->
+<!-- /react-text --></tbody><!-- react-text: 224 -->
+<!-- /react-text --></table><!-- react-text: 225 -->
+<!-- /react-text --><p data-reactid="226"><strong data-reactid="227">注意：</strong><!-- react-text: 228 --> <!-- /react-text --><code data-reactid="229">abc.md</code><!-- react-text: 230 --> 不一定对应英文环境，需要看<!-- /react-text --><a href="/picidae-theme-haier/guides/configuration_zh#defaultlang" data-reactid="231">配置</a><!-- react-text: 232 -->中的 <!-- /react-text --><code data-reactid="233">defaultLang</code></p><!-- react-text: 234 -->
+<!-- /react-text --><p data-reactid="235"><!-- react-text: 236 -->其中，<!-- /react-text --><code data-reactid="237">api/hello-haier.md</code><!-- react-text: 238 --> 中的支持的 yaml-front order 数据，表示的是同级文档下的排序关系，
+如还存在文档 <!-- /react-text --><code data-reactid="239">api/hello-picidae.md</code><!-- react-text: 240 -->，那么页面上渲染的相对顺序是按照 order 来渲染的（从小到大）。<!-- /react-text --></p><!-- react-text: 241 -->
+<!-- /react-text --><p data-reactid="242"><!-- react-text: 243 -->噢对了，还有 <!-- /react-text --><code data-reactid="244">api/__information__.md</code><!-- react-text: 245 --> 文件，该文件不同于其他 markdown 文档，
+它是用来控制菜单中的中英文标题，和控制与不同组文档的相对顺序的（从小到大）。<!-- /react-text --></p><!-- react-text: 246 -->
+<!-- /react-text --><pre data-reactid="247"><code class="hljs language-yaml" data-query="{}" data-lang="yaml" data-reactid="248"><span class="hljs-comment" data-reactid="249"># api/__information__.md</span><!-- react-text: 250 -->
+<!-- /react-text --><span class="hljs-comment" data-reactid="251"># 英文标题</span><!-- react-text: 252 -->
+<!-- /react-text --><span class="hljs-attr" data-reactid="253">title:</span><!-- react-text: 254 --> <!-- /react-text --><span class="hljs-string" data-reactid="255">&quot;Get Stated&quot;</span><!-- react-text: 256 -->
+<!-- /react-text --><span class="hljs-comment" data-reactid="257"># 中文标题</span><!-- react-text: 258 -->
+<!-- /react-text --><span class="hljs-attr" data-reactid="259">title_zh:</span><!-- react-text: 260 --> <!-- /react-text --><span class="hljs-string" data-reactid="261">&quot;开始使用&quot;</span><!-- react-text: 262 -->
+<!-- /react-text --><span class="hljs-attr" data-reactid="263">order:</span><!-- react-text: 264 --> <!-- /react-text --><span class="hljs-number" data-reactid="265">1</span></code></pre><!-- react-text: 266 -->
+<!-- /react-text --></article></div><div class="docs-prevnext" data-reactid="267"><a class="docs-prev button" href="/picidae-theme-haier/guides/installation_zh" data-reactid="268">← 环境安装</a><a class="docs-next button" href="/picidae-theme-haier/guides/configuration_zh" data-reactid="269">配置说明 →</a></div></div></div></div></div><footer class="nav-footer" data-reactid="270"><a href="https://github.com/picidaejs/picidaejs" target="_blank" class="fbOpenSource" data-reactid="271"><img src="https://github.com/picidaejs/picidaejs/raw/master/logo/picidae-2x.png" data-reactid="272"/></a><section class="copyright" data-reactid="273"><p style="margin-bottom:5px;" data-reactid="274">Copyright © 2018 - Built by Picidae</p><!-- react-text: 275 -->Powered by <!-- /react-text --><a href="https://github.com/picidaejs/picidae-theme-haier" target="_blank" data-reactid="276">🍔 Haier</a><!-- react-text: 277 -->.<!-- /react-text --></section></footer></div>
+</div>
+<script src="/picidae-theme-haier/PICIDAE_COMMON.js"></script>
+<script src="/picidae-theme-haier/PICIDAE_ENTRY.js"></script>
+</body>
+</html>

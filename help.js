@@ -1,0 +1,2 @@
+webpackJsonp([3,20],{886:function(e,i){e.exports={content:'<h2 id="help"><a href="#help" aria-hidden="true"><span class="icon icon-link"></span></a>Help</h2>\n<p>🍔 Welcome you to submit the issue in <a href="https://github.com/picidaejs/picidae-theme-haier/issues">Haier repo</a><br>\nAnd maybe your confusion is from <a href="https://github.com/picidaejs/picidaejs/issues">Picidae</a></p>\n<p>😊 Thanks!</p>\n<p>—— cuttle</p>\n',extra:{}}}});
+//# sourceMappingURL=help.js.map
